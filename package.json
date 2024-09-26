@@ -1,5 +1,5 @@
 {
-  "name": "nodecg-react-template",
+  "name": "my-streamlayout",
   "version": "1.0.0",
   "scripts": {
     "dev": "run-p dev:*",
@@ -22,7 +22,13 @@
     ],
     "graphics": [
       {
-        "file": "example.html",
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "speedrun-info.html",
         "width": 1920,
         "height": 1080,
         "singleInstance": false
@@ -32,6 +38,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@fontsource-variable/m-plus-1": "^5.1.0",
     "@mdi/react": "^1.6.1",
     "@mui/material": "^6.1.1",
     "@nodecg/react-hooks": "^1.0.3",
