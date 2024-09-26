@@ -12,11 +12,11 @@
     "compatibleRange": "^2.0.0",
     "dashboardPanels": [
       {
-        "name": "example",
-        "title": "Example",
+        "name": "announce",
+        "title": "告知情報",
         "width": 2,
-        "file": "example.html",
-        "workspace": "Example",
+        "file": "announce.html",
+        "workspace": "Rickychann",
         "headerColor": "#525F78"
       }
     ],
