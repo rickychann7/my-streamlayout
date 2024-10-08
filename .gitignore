@@ -2,6 +2,9 @@ node_modules
 /dashboard
 /extension
 /graphics
+/shared/dist
+cfg
+src/types/schemas
 
 # tsbuildinfo
 *.tsbuildinfo

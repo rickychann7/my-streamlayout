@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  nodecg:
+    image: ghcr.io/nodecg/nodecg:2
+    user: root
+    command: sh -c "npm i --omit=dev && node --enable-source-maps ../.."
+    working_dir: /opt/nodecg/bundles/my-streamlayout
+    init: true
+    ports:
+      - 9090:9090
+    volumes:
+      - nodecg_db:/opt/nodecg/db
+      - nodecg_assets:/opt/nodecg/assets
+      - node_modules:/opt/nodecg/bundles/my-streamlayout/node_modules
+      - ./cfg:/opt/nodecg/cfg:ro
+      - ./package.json:/opt/nodecg/bundles/my-streamlayout/package.json:ro
+      - ./package-lock.json:/opt/nodecg/bundles/my-streamlayout/package-lock.json
+      - ./dashboard:/opt/nodecg/bundles/my-streamlayout/dashboard:ro
+      - ./extension:/opt/nodecg/bundles/my-streamlayout/extension:ro
+      - ./graphics:/opt/nodecg/bundles/my-streamlayout/graphics:ro
+      - ./schemas:/opt/nodecg/bundles/my-streamlayout/schemas:ro
+      - ./src:/opt/nodecg/bundles/my-streamlayout/src:ro
+      - ./shared:/opt/nodecg/bundles/my-streamlayout/shared:ro
+
+volumes:
+  nodecg_db:
+  nodecg_assets:
+  node_modules:
