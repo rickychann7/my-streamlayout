@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   nodecg:
@@ -12,8 +12,7 @@ services:
     volumes:
       - nodecg_db:/opt/nodecg/db
       - nodecg_assets:/opt/nodecg/assets
-      - node_modules:/opt/nodecg/bundles/my-streamlayout/node_modules
-      - ./cfg:/opt/nodecg/cfg:ro
+      - node_modules:/opt/nodecg/bundles/my-streamlayout/node_module
       - ./package.json:/opt/nodecg/bundles/my-streamlayout/package.json:ro
       - ./package-lock.json:/opt/nodecg/bundles/my-streamlayout/package-lock.json
       - ./dashboard:/opt/nodecg/bundles/my-streamlayout/dashboard:ro
