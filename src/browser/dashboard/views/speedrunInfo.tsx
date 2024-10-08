@@ -7,12 +7,15 @@ import {
 } from "@mui/material";
 import {render} from "../../render";
 import {useState} from "react";
+import {useReplicant} from "@nodecg/react-hooks";
+import {Speedruncom} from "../../../types/schemas";
 
 const theme = createTheme();
 
 const App = () => {
 	const [gameName, setGameName] = useState<string>("");
 	const [categoryName, setCategoryName] = useState<string>("");
+	const [speedrun] = useReplicant<Speedruncom>("speedruncom");
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -43,8 +46,8 @@ const App = () => {
 			</div>
 			<h3 style={{margin: 0}}>現在の情報</h3>
 			<div style={{display: "inline"}}>
-				<div>ゲーム名:{gameName}</div>
-				<div>カテゴリ名:{categoryName}</div>
+				<div>ゲーム名:{speedrun?.gameName}</div>
+				<div>カテゴリ名:{speedrun?.categoryName}</div>
 			</div>
 		</ThemeProvider>
 	);
